@@ -58,6 +58,17 @@ class App extends Component {
     });
   }
 
+/*
+  deleteItem = id => {
+    const filteredContacts = this.state.contacts.filter((contacts) => contacts.id !== id);
+    this.setState({
+      contacts: filteredContacts,
+    });
+  }
+
+<button onClick={() => this.deleteItem(contacts.id)}>Delete</button>
+*/
+
   render () {
     return (
       <div className="App">
@@ -68,10 +79,11 @@ class App extends Component {
               name={contacts.name}
               picture={contacts.pictureUrl}
               popularity={contacts.popularity}
-              />
+              /> 
               )
             })}
         </ul>
+
         <button onClick={this.addRandomContact}>Add Random Contact</button>
         <button onClick={this.sortByName}>Sort by name</button>
         <button onClick={this.sortByPopularity}>Sort by popularity</button>
